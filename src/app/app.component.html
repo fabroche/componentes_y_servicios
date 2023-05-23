@@ -1,4 +1,11 @@
-<p><input type="text" [(ngModel)]="imgParent" /></p>
-<p><myImg (loaded)="onLoaded($event)" [img]="imgParent"></myImg></p>
+<ProductList></ProductList>
 
-<app-product [product]="product" *ngFor="let product of products"></app-product>
+<!-- <p><input type="text" [(ngModel)]="imgParent" /></p>
+<button (click)="toggleImg()">{{ showImg ? "Hide img" : "Show img" }}</button>
+<p>
+  <myImg
+    *ngIf="showImg"
+    (loaded)="onLoaded($event)"
+    [img]="'../../../assets/products/' + imgParent + '.jpg'"
+  ></myImg>
+</p> -->
