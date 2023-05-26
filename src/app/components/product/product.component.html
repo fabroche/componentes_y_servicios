@@ -1,9 +1,19 @@
-<div>
-  <ProductImg [img]="product.image" alt=""></ProductImg>
+<div class="product-container">
+  <ProductImg (click)="onShowDescription()" [img]="product.image" alt=""></ProductImg>
+</div>
+<div class="product-options">
   <h2>{{ product.name }}</h2>
-  <p>{{ product.description }}</p>
   <p>${{ product.price }}</p>
   <p>
-    <button (click)="onAddToCart()">Add to cart</button>
+    <button (click)="onAddToCart()">
+      <img src="../../../assets/svg/bt_add_to_cart.svg" alt="" />
+    </button>
+  </p>
+</div>
+<div class="product-description" [class.active]="showDescription">
+  <p>{{ product.description }}
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit optio animi
+    quas veritatis quos quam a doloremque sit debitis eligendi quia error
+    facilis, natus consectetur repellat ullam exercitationem itaque velit.
   </p>
 </div>

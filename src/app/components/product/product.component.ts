@@ -17,11 +17,18 @@ export class ProductComponent implements OnInit {
 
   @Output() addedProduct = new EventEmitter<IProduct>();
 
+  showDescription = false;
+
   constructor() {}
 
   ngOnInit(): void {}
 
   onAddToCart() {
     this.addedProduct.emit(this.product);
+  }
+
+  onShowDescription() {
+    this.showDescription = !this.showDescription;
+    console.log('this.showDescription :>> ', this.showDescription);
   }
 }
