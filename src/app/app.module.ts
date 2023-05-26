@@ -8,9 +8,10 @@ import { ImgComponent } from './components/img/img.component';
 import { ProductComponent } from './components/product/product.component';
 import { ProductsComponent } from './components/products/products.component';
 import { NavbarstoreComponent } from './components/navbarstore/navbarstore.component';
+import { ShoppingcartComponent } from './components/shoppingcart/shoppingcart.component';
 
 @NgModule({
-  declarations: [AppComponent, ImgComponent, ProductComponent, ProductsComponent, NavbarstoreComponent],
+  declarations: [AppComponent, ImgComponent, ProductComponent, ProductsComponent, NavbarstoreComponent, ShoppingcartComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],

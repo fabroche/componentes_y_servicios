@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { IProduct } from 'src/app/models/product.model';
 
 @Component({
@@ -7,6 +7,8 @@ import { IProduct } from 'src/app/models/product.model';
   styleUrls: ['./products.component.sass'],
 })
 export class ProductsComponent {
+  @Output() addedProduct = new EventEmitter<IProduct>();
+
   products: IProduct[] = [
     {
       id: '1',
@@ -30,4 +32,8 @@ export class ProductsComponent {
       description: 'The best coffe of all times',
     },
   ];
+
+  onAddToShoopingCart(product: IProduct) {
+    this.addedProduct.emit(product);
+  }
 }

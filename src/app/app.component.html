@@ -1,5 +1,5 @@
-<Navbarstore></Navbarstore>
-<ProductList></ProductList>
+<Navbarstore [toBuyProducts]="toBuyProducts"></Navbarstore>
+<ProductList (addedProduct)="onAddToShoopingCart($event)"></ProductList>
 
 <!-- <p><input type="text" [(ngModel)]="imgParent" /></p>
 <button (click)="toggleImg()">{{ showImg ? "Hide img" : "Show img" }}</button>

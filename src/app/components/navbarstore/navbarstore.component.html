@@ -6,9 +6,11 @@
     <a href="">
       <img src="./assets/svg/logo_yard_sale.svg" alt="logo" />
     </a>
-    <a href="">
-      <img src="./assets/svg/icon_shopping_cart.svg" alt="logo" />
-    </a>
+    <Shoppingcart
+      shoppingcartUrl=""
+      icon="./assets/svg/icon_shopping_cart.svg"
+      [shoppingcart]="toBuyProducts"
+    ></Shoppingcart>
   </div>
   <div class="side-menu" [class.active]="activeMenu">
     <div class="side-menu-container">
@@ -38,9 +40,11 @@
     <div class="info">
       <div class="account">fabroche@genzai.com</div>
       <div>
-        <a href="">
-          <img src="./assets/svg/icon_shopping_cart.svg" alt="logo" />
-        </a>
+        <Shoppingcart
+          shoppingcartUrl=""
+          icon="./assets/svg/icon_shopping_cart.svg"
+          [shoppingcart]="toBuyProducts"
+        ></Shoppingcart>
       </div>
     </div>
   </div>

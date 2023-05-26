@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { IProduct } from 'src/app/models/product.model';
 
 @Component({
   selector: 'Navbarstore',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarstoreComponent implements OnInit {
   activeMenu = false;
+  @Input() toBuyProducts: IProduct[] = [];
 
   constructor() {}
 

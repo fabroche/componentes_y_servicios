@@ -1,0 +1,4 @@
+<a [href]="shoppingcartUrl">
+  <img [src]="icon" alt="logo" />
+</a>
+<span *ngIf="onTotalProducts()" class="shoppingcart-notification">{{ onTotalProducts() }}</span>

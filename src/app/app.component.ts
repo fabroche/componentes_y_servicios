@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { IProduct } from './models/product.model';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   imgParent = '';
   showImg = true;
+  toBuyProducts: IProduct[] = [];
+
+  @Output() addedProduct = new EventEmitter<IProduct>();
 
   onLoaded(img: string) {
     console.log('log padre');
@@ -20,5 +24,9 @@ export class AppComponent {
 
   toggleImg() {
     this.showImg = !this.showImg;
+  }
+
+  onAddToShoopingCart(product: IProduct) {
+    this.toBuyProducts.push(product);
   }
 }
