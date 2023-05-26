@@ -13,7 +13,7 @@ export class ShoppingcartComponent {
   totalProducts = 0;
   totalPrice = 0;
 
-  onTotalPrice() {
+  getTotalPrice() {
     this.totalPrice = this.shoppingcart.reduce(
       (sum, item) => sum + item.price,
       0
@@ -21,7 +21,7 @@ export class ShoppingcartComponent {
     return this.totalPrice;
   }
 
-  onTotalProducts() {
+  getTotalProducts() {
     this.totalProducts = this.shoppingcart.length;
     return this.totalProducts;
   }

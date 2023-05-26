@@ -29,6 +29,5 @@ export class ProductComponent implements OnInit {
 
   onShowDescription() {
     this.showDescription = !this.showDescription;
-    console.log('this.showDescription :>> ', this.showDescription);
   }
 }
